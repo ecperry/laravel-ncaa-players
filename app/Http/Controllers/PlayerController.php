@@ -13,10 +13,10 @@ class PlayerController extends Controller
     return Response::json($players);
   }
 
-  public function show($id)
+  public function create($id)
   {
-    $player = Player::find($id);
-    return Response::json($players);
+    Player::create($request->all());
+    return Response::json(['created => true']);
   }
 
   public function show($id)
