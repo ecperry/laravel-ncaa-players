@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/players', 'PlayerController@index');
+Route::post('/players', 'PlayerController@create');
+
+Route::get('/games/{id}', 'PlayerController@show');
