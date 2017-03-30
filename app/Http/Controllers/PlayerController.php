@@ -23,6 +23,5 @@ class PlayerController extends Controller
   {
     $player = Player::find($id);
     return Response::json($game);
-
   }
 }
